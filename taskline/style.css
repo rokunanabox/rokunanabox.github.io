@@ -211,3 +211,32 @@ footer a { margin: 0 8px; }
 .card.b-yellow { border-color: var(--yellow); }
 .card.b-green { border-color: var(--green); }
 .card.b-purple { border-color: var(--purple); }
+
+/* 画面にあるボタンや項目の名前（アプリのボタン風） */
+.ui {
+  display: inline-block;
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 8px;
+  background: var(--line);
+  color: var(--text);
+  font-size: 0.9em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* いちばん大事なところ（カード1枚に1か所まで） */
+mark {
+  background: linear-gradient(transparent 55%, rgba(247, 183, 49, 0.55) 55%);
+  color: inherit;
+  font-weight: 600;
+}
+
+/* 手順・ポイントの箇条書き */
+.steps {
+  margin: 8px 0 0;
+  padding-left: 1.4em;
+}
+.steps li { margin: 4px 0; }
+.card .lead { margin-top: 0; font-weight: 600; }
+.faq .steps { color: var(--muted); margin-left: 36px; }
