@@ -4,31 +4,49 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>タスクライン サポート</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.8; color: #222; background: #fff; margin: 0; padding: 24px 16px; }
-    main { max-width: 720px; margin: 0 auto; }
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.1rem; margin-top: 2em; }
-    @media (prefers-color-scheme: dark) { body { color: #eee; background: #151718; } a { color: #6cc4e6; } }
-  </style>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="hero">
+  <img src="icon.png" alt="">
+  <h1>タスクライン</h1>
+  <p>今日のタスクを、リストとタイムラインで。</p>
+  <span class="page-chip">サポート</span>
+  <div class="timeline-strip" aria-hidden="true">
+    <span class="c-red"></span><span class="c-teal"></span><span class="c-blue"></span><span class="c-yellow"></span><span class="c-green"></span><span class="c-purple"></span>
+  </div>
+</header>
+
 <main>
-  <h1>タスクライン サポート</h1>
-  <p>タスクラインは、その日のタスクをリストとタイムラインの両方で管理できる iPhone 向けアプリです。</p>
+  <div class="card">
+    <p>タスクラインは、その日のタスクをリストとタイムラインの両方で管理できる iPhone 向けアプリです。やることを書き出したら、目安時間に合わせて一日の時間割に並べられます。</p>
+  </div>
 
-  <h2>よくある質問</h2>
-  <p><strong>Q. タスクを時間に配置するには？</strong><br>
-  タイムライン画面の「配置」表示で、未配置のタスクをタップして選び、配置したい時間帯をタップします。長押しでドラッグして配置することもできます。「空き時間に自動配置」で、まとめて空き時間に並べることもできます。</p>
-  <p><strong>Q. 開始時刻の通知が来ません。</strong><br>
-  iOS の「設定」→「通知」→「タスクライン」で通知が許可されているか、アプリのタイムライン設定で「開始時刻の通知」がオンになっているかをご確認ください。</p>
-  <p><strong>Q. 機種変更でデータを引き継げますか？</strong><br>
-  データは端末内にのみ保存されます。iPhone のバックアップから復元した場合は引き継がれます。</p>
+  <span class="badge" id="contact">お問い合わせ</span>
+  <div class="card">
+    <p>不具合のご報告やご要望は、お問い合わせフォームからお願いします。</p>
+    <a class="primary-button" href="https://forms.gle/grSxTFB1MuxKrvfKA">お問い合わせフォームを開く</a>
+  </div>
 
-  <h2 id="contact">お問い合わせ</h2>
-  <p>不具合のご報告やご要望は、<a href="https://forms.gle/grSxTFB1MuxKrvfKA">お問い合わせフォーム</a>からお願いします。</p>
-
-  <p><a href="privacy.html">プライバシーポリシー</a></p>
+  <span class="badge">よくある質問</span>
+  <details class="card faq">
+    <summary><span class="q c-blue">Q</span>タスクを時間に配置するには？</summary>
+    <p>タイムライン画面の「配置」表示で、未配置のタスクをタップして選び、配置したい時間帯をタップします。長押しでドラッグして配置することもできます。「空き時間に自動配置」で、まとめて空き時間に並べることもできます。</p>
+  </details>
+  <details class="card faq">
+    <summary><span class="q c-yellow">Q</span>開始時刻の通知が来ません。</summary>
+    <p>iOS の「設定」→「通知」→「タスクライン」で通知が許可されているか、アプリのタイムライン設定で「開始時刻の通知」がオンになっているかをご確認ください。</p>
+  </details>
+  <details class="card faq">
+    <summary><span class="q c-teal">Q</span>機種変更でデータを引き継げますか？</summary>
+    <p>データは端末内にのみ保存されます。iPhone のバックアップから復元した場合は引き継がれます。</p>
+  </details>
 </main>
+
+<footer>
+  <a href="support.html">サポート</a><a href="privacy.html">プライバシーポリシー</a>
+  <div>© rokunanabox</div>
+</footer>
 </body>
 </html>
