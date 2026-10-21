@@ -240,3 +240,8 @@ mark {
 .steps li { margin: 4px 0; }
 .card .lead { margin-top: 0; font-weight: 600; }
 .faq .steps { color: var(--muted); margin-left: 36px; }
+
+/* ダークモードではマーカーを控えめにする（明るい黄色は暗い背景で目立ちすぎる） */
+@media (prefers-color-scheme: dark) {
+  mark { background: linear-gradient(transparent 60%, rgba(247, 183, 49, 0.3) 60%); }
+}
