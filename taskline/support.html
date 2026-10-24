@@ -30,7 +30,8 @@
       <li><span class="check c-yellow">2</span><span>タイムラインの <span class="ui">配置</span> で時間割に並べる</span></li>
       <li><span class="check c-teal">3</span><span>終わったら丸をタップしてチェック</span></li>
     </ul>
-    <p>追加するときに選べるもの: 色・目安時間（5分〜5時間）・開始時刻・今日／明日・繰り返し</p>
+    <p>追加するときに選べるもの: 色・目安時間（5分〜5時間）・開始時刻・今日／明日・繰り返し・メモとリンク</p>
+    <p>タスクの追加はタスク画面だけです。タイムラインの <span class="ui">＋ 固定枠</span> は、仕事や学校など動かせない予定を入れるためのものです。</p>
   </div>
 
   <span class="badge">機能</span>
@@ -41,7 +42,8 @@
       <li>リストの追加: タブの右の <span class="ui">＋</span></li>
       <li>名前の変更・削除: <span class="ui">⚙ 設定</span> → <span class="ui">リストの管理</span></li>
       <li>並び替え: タスクを長押しして動かす</li>
-      <li>削除: タスクを押して開く画面の <span class="ui">このタスクを削除</span>、または右にスワイプ → <span class="ui">削除</span>。直後の <span class="ui">元に戻す</span> で<mark>取り消せます</mark></li>
+      <li>メモとリンク: タスクを押して開く画面（追加のときも同じ）の <span class="ui">メモのアイコン</span> から。メモと、リンク（1件）を付けられます。メモの1行目がタスクの下に出ます</li>
+      <li>削除: タスクを押して開く画面の <span class="ui">ゴミ箱のアイコン</span>、または右にスワイプ → <span class="ui">削除</span>。直後の <span class="ui">元に戻す</span> で<mark>取り消せます</mark></li>
     </ul>
   </section>
 
@@ -56,11 +58,11 @@
 
   <section class="card b-green">
     <h2>繰り返し</h2>
-    <p class="lead">追加するときに <span class="ui">繰り返し</span> で <span class="ui">毎日</span>／<span class="ui">平日</span>／<span class="ui">毎週</span> を選ぶと、<mark>今日と明日のぶんが自動で作られます</mark>。</p>
+    <p class="lead">追加するときに、<span class="ui">なし</span>／<span class="ui">毎日</span>／<span class="ui">平日</span>／<span class="ui">毎週</span> の行で選ぶと、<mark>今日と明日のぶんが自動で作られます</mark>（毎週は曜日も選べます）。</p>
     <ul class="steps">
       <li>繰り返しのタスクには「↻」が付きます</li>
       <li>変更・削除のときに <span class="ui">この日だけ</span> か <span class="ui">以降すべて</span> を選べます</li>
-      <li>やめるとき: 編集で <span class="ui">繰り返し</span> を <span class="ui">なし</span> に</li>
+      <li>やめるとき: 編集でその行の <span class="ui">なし</span> を選ぶ</li>
     </ul>
   </section>
 
@@ -68,12 +70,25 @@
     <h2>タイムライン</h2>
     <p class="lead">開始時刻のあるタスクを時間軸に並べて表示します。</p>
     <ul class="steps">
+      <li>表示の切り替え: <span class="ui">リスト</span>（時刻順に並べて見る）／<span class="ui">配置</span>（時間軸に置く）</li>
       <li>配置: <span class="ui">配置</span> で未配置のタスクをタップ → <mark>置きたい時間帯をタップ</mark></li>
       <li>時刻の変更: 配置したタスクをドラッグ</li>
       <li>詳細: 配置したタスクを押す（<span class="ui">時間を未設定に</span>／<span class="ui">このタスクを削除</span> もここから）</li>
       <li>まとめて配置: <span class="ui">空き時間に自動配置</span></li>
       <li>起床・就寝の時刻: <span class="ui">⚙ 設定</span>（その間の空き時間が上に出ます）</li>
       <li>重なりすぎたタスクは「3件」のようにまとめて表示。タップで一覧が開きます</li>
+    </ul>
+  </section>
+
+  <section class="card b-teal">
+    <h2>固定枠</h2>
+    <p class="lead">仕事・学校などの、<mark>動かせない予定</mark>です。チェックはせず、タイムラインに斜線の帯で出て、その時間は空き時間から外れます。</p>
+    <ul class="steps">
+      <li>追加: タイムラインの右下の <span class="ui">＋ 固定枠</span>（配置表示で時間帯をタップしても追加できます）</li>
+      <li><span class="ui">開始（必須）</span>・長さ（30分〜10時間）・今日／明日・繰り返しを選びます。繰り返しにすると、毎日の仕事も一度で入ります</li>
+      <li>固定枠と重なる時間帯のタスクは、帯の右側に並びます</li>
+      <li>変更・削除: 帯（リスト表示ではカード）を押して開く画面から</li>
+      <li>タスク画面には出ず、通知も来ません</li>
     </ul>
   </section>
 
@@ -107,6 +122,19 @@
     <p><span class="ui">空き時間に自動配置</span> で、まとめて空き時間に並べることもできます。</p>
   </details>
   <details class="card faq">
+    <summary><span class="q c-teal">Q</span>タイムラインからタスクを追加できますか？</summary>
+    <p>タスクの追加は<mark>タスク画面だけ</mark>です。タイムラインの <span class="ui">＋ 固定枠</span> は、仕事や学校などの動かせない予定を入れるためのものです。</p>
+    <p>時間を決めて入れたいタスクは、タスク画面で追加するときに <span class="ui">開始指定</span> を選ぶか、追加したあとにタイムラインの <span class="ui">配置</span> で時間に置きます。</p>
+  </details>
+  <details class="card faq">
+    <summary><span class="q c-green">Q</span>固定枠は、タスクと何が違いますか？</summary>
+    <p>固定枠は、仕事・学校・通院など<mark>時間が決まっていて動かせない予定</mark>です。チェックして完了にするものではなく、その時間は「空き」から除かれます。タスクは、やることを時間に置いて、終わったらチェックするものです。</p>
+  </details>
+  <details class="card faq">
+    <summary><span class="q c-purple">Q</span>タスクにメモやリンクを付けられますか？</summary>
+    <p>はい。タスクの追加・編集の画面の下にある<span class="ui">メモのアイコン</span>から、メモと、リンク（1件）を付けられます。リンクは <span class="ui">開く</span> で、ブラウザなど別のアプリで開きます。</p>
+  </details>
+  <details class="card faq">
     <summary><span class="q c-yellow">Q</span>開始時刻の通知が来ません。</summary>
     <ul class="steps">
       <li>iOS の <span class="ui">設定</span> → <span class="ui">通知</span> → <span class="ui">タスクライン</span> で許可されているか</li>
@@ -132,7 +160,7 @@
     <summary><span class="q c-purple">Q</span>繰り返しのタスクを1日だけ休みたい・やめたい。</summary>
     <ul class="steps">
       <li>1日だけ休む: その日のタスクを削除 → <span class="ui">この日だけ削除</span></li>
-      <li>やめる: 削除 → <span class="ui">以降もすべて削除</span>、または編集で <span class="ui">繰り返し</span> を <span class="ui">なし</span> に</li>
+      <li>やめる: 削除 → <span class="ui">以降もすべて削除</span>、または編集で繰り返しの行の <span class="ui">なし</span> を選ぶ</li>
     </ul>
   </details>
   <details class="card faq">
@@ -149,7 +177,7 @@
   </details>
   <details class="card faq">
     <summary><span class="q c-teal">Q</span>データはどこに保存されますか？</summary>
-    <p>タスクや設定は、<mark>お使いの iPhone の中だけ</mark>に保存され、外部へは送信されません。くわしくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+    <p>タスク（メモ・リンクを含む）や固定枠、設定は、<mark>お使いの iPhone の中だけ</mark>に保存され、外部へは送信されません。くわしくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
   </details>
 
   <span class="badge" id="contact">お問い合わせ</span>
