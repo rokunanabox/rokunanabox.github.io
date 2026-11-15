@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1C2A44">
+<title>飲みドコ サポート</title>
+<link rel="icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/12.19.0/firebase-auth-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script>
+<script defer src="contact.js"></script>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="logo" href="support.html">飲み<span>ドコ</span></a><p>飲み友と、今夜の一軒を。</p></div></header>
+<main class="wrap">
+<h1>サポート</h1>
+<p>飲みドコは、行きたいお店と行ったお店を記録して、飲み友と「今日どこ行く?」を決める iPhone アプリです。困ったときは、下のよくある質問を見るか、お問い合わせからご連絡ください。</p>
+
+<h2>よくある質問</h2>
+<details><summary>機種を変えたら、記録はどうなる?</summary>
+<p>アプリの「自分」→「アカウント」で「Apple でサインイン」をしておくと、新しい iPhone でも同じ Apple ID でサインインすれば記録に戻れます。サインインしていないまま アプリを削除したり機種を変えたりすると、記録に戻れません。</p></details>
+<details><summary>飲み友になるには?</summary>
+<p>右上のアイコン →「飲み友」→「飲み友を誘う」で、QR コードを読んでもらうか、招待を LINE などで送ります。相手が申請し、あなたが「承認」すると飲み友になります。</p></details>
+<details><summary>メモやひとことは飲み友に見られる?</summary>
+<p>見られません。飲み友に見えるのは、ニックネーム・アイコン、お店の基本情報、星・本命・定番、その人を入れた今日の候補だけです。くわしくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p></details>
+<details><summary>知らない人から申請が来た・迷惑な人がいる</summary>
+<p>「飲み友」画面で、申請の「断る…」または飲み友の「…」から、ブロックや通報ができます。ブロックすると飲み友から外れ、その人からの申請も届かなくなります(相手には知らされません)。通報は運営が確認し、必要に応じて対応します。</p></details>
+<details><summary>間違えて入れたお店を消したい</summary>
+<p>リストでお店を左にスワイプすると外せます。「行った」のお店は右にスワイプで「行きたい」に戻せます。お店を長押しすると、ほかの操作も選べます。</p></details>
+<details><summary>お店が検索で見つからない</summary>
+<p>「探す」はホットペッパーグルメに載っている、札幌と東京のお店から探します。見つからないお店は、Google マップなどのリンクを貼るか、「名前だけ」で追加してください。</p></details>
+<details><summary>Web版(酒場図)の記録をアプリに移したい</summary>
+<p>Web版の「飲み友」画面で「引き継ぎコードを出す」を押し、アプリの「自分」→「引き継ぎコードを入れる」に入れてください。コードは24時間使えます。</p></details>
+<details><summary>アカウントとデータを削除したい</summary>
+<p>アプリの「自分」→「アカウントを削除する」で、お店の記録・飲み友のつながり・プロフィールなどを、すべて削除できます。元には戻せません。アプリを開けない場合は、下のお問い合わせからご連絡ください。</p></details>
+
+<h2 id="contact">お問い合わせ</h2>
+<div class="card">
+  <form id="cf">
+    <label for="kind">種類</label>
+    <select id="kind" required>
+      <option value="bug">不具合</option>
+      <option value="howto">使い方の質問</option>
+      <option value="idea">ご要望</option>
+      <option value="safety">迷惑な利用者・安全について</option>
+      <option value="data">データ・アカウント削除</option>
+      <option value="other">その他</option>
+    </select>
+    <label for="text">内容</label>
+    <textarea id="text" maxlength="2000" required placeholder="できるだけ具体的にお書きください(どの画面で、何をしたら、どうなったか など)"></textarea>
+    <label for="reply">返信先(任意)</label>
+    <input id="reply" type="text" maxlength="200" placeholder="返信がほしい場合は、メールアドレスなど">
+    <p class="note">返信先は、このお問い合わせへの返信にだけ使います。アプリの「自分」→「お問い合わせ」からも送れます。</p>
+    <button id="send" type="submit">送る</button>
+    <p id="msg" class="msg" role="status"></p>
+  </form>
+</div>
+<p class="sign">飲みドコ運営</p>
+</main>
+<footer class="ft"><a href="support.html">サポート</a> ・ <a href="privacy.html">プライバシーポリシー</a></footer>
+</body>
+</html>
