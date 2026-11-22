@@ -28,6 +28,8 @@ em{font-style:normal}
 .lead{font-size:16px;opacity:.88;margin:0 0 26px}
 .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
 .soon{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--night);font-weight:900;border-radius:14px;padding:12px 20px;font-size:15px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.shot-note{font-size:12px;opacity:.7;margin:14px 0 0}
+.shot-note.dark{text-align:center;color:var(--sub);opacity:1;margin-top:10px}
 .more{color:var(--cream);opacity:.85;font-weight:700;text-decoration:none;font-size:14px}
 .hero-phones{position:relative;height:560px}
 .phone{border-radius:42px;background:#0B0B0F;padding:9px;box-shadow:0 30px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08) inset}
@@ -35,14 +37,29 @@ em{font-style:normal}
 .phone::before{content:"";display:block;position:relative;z-index:1;margin-bottom:-2px;padding-top:12.8%;border-radius:34px 34px 0 0;background:#F3EEE5 url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20390%2050%27%3E%3Ctext%20x%3D%2758%27%20y%3D%2734%27%20font-family%3D%27-apple-system%2CHelvetica%2CArial%2Csans-serif%27%20font-size%3D%2717%27%20font-weight%3D%27700%27%20fill%3D%27%231A1A1F%27%20text-anchor%3D%27middle%27%3E21%3A00%3C%2Ftext%3E%3Cg%20fill%3D%27%231A1A1F%27%3E%3Crect%20x%3D%27292%27%20y%3D%2726%27%20width%3D%273.5%27%20height%3D%276%27%20rx%3D%271%27%2F%3E%3Crect%20x%3D%27298%27%20y%3D%2723%27%20width%3D%273.5%27%20height%3D%279%27%20rx%3D%271%27%2F%3E%3Crect%20x%3D%27304%27%20y%3D%2720%27%20width%3D%273.5%27%20height%3D%2712%27%20rx%3D%271%27%2F%3E%3Crect%20x%3D%27310%27%20y%3D%2717%27%20width%3D%273.5%27%20height%3D%2715%27%20rx%3D%271%27%2F%3E%3Cpath%20d%3D%27M327%2031.5l3-3.4a4.6%204.6%200%200%200-6%200zM320.5%2024.6l2%202.2a7.6%207.6%200%200%201%209%200l2-2.2a10.6%2010.6%200%200%200-13%200zM317.6%2021.4l2%202.2a11.8%2011.8%200%200%201%2014.8%200l2-2.2a14.8%2014.8%200%200%200-18.8%200z%27%2F%3E%3Crect%20x%3D%27343%27%20y%3D%2717.5%27%20width%3D%2725%27%20height%3D%2713%27%20rx%3D%274%27%20fill%3D%27none%27%20stroke%3D%27%231A1A1F%27%20stroke-opacity%3D%27.4%27%20stroke-width%3D%271.2%27%2F%3E%3Crect%20x%3D%27345%27%20y%3D%2719.5%27%20width%3D%2718%27%20height%3D%279%27%20rx%3D%272.2%27%2F%3E%3Crect%20x%3D%27369.5%27%20y%3D%2721.6%27%20width%3D%271.8%27%20height%3D%274.8%27%20rx%3D%27.9%27%20fill-opacity%3D%27.45%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") center/100% 100% no-repeat}
 .phone::after{content:"";position:absolute;z-index:2;top:9px;margin-top:1.8%;left:50%;transform:translateX(-50%);width:31%;aspect-ratio:3.3/1;border-radius:999px;background:#0B0B0F}
 .phone img{display:block;width:100%;height:auto;border-radius:0 0 34px 34px}
-.hero-phones .phone{position:absolute;width:250px}
-.hero-phones .front{left:6%;top:10px;transform:rotate(-4deg);z-index:2}
-.hero-phones .back{right:2%;top:60px;transform:rotate(6deg);opacity:.92}
-.dm-peek{position:absolute;left:-10px;bottom:-6px;z-index:3;display:flex;align-items:flex-end;gap:4px}
+.hero-phones .phone{position:absolute;width:240px}
+.hero-phones .front{left:24%;top:10px;transform:rotate(-4deg);z-index:2}
+.hero-phones .back{right:-6%;top:60px;transform:rotate(6deg);opacity:.92}
+/* だるまは画面と重ならないよう左下に。吹き出しはだるまの上 */
+.dm-peek{position:absolute;left:0;bottom:24px;z-index:3;display:flex;flex-direction:column-reverse;align-items:center;gap:6px;width:96px}
 .dm-peek img{filter:drop-shadow(0 8px 14px rgba(0,0,0,.35));animation:bob 3.2s ease-in-out infinite}
-.bub{background:#fff;color:var(--ink);font-weight:900;font-size:14px;border-radius:16px 16px 16px 4px;padding:8px 14px;margin-bottom:58px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.bub{background:#fff;color:var(--ink);font-weight:900;font-size:14px;border-radius:16px 16px 4px 16px;padding:8px 12px;text-align:center;line-height:1.4;box-shadow:0 6px 16px rgba(0,0,0,.25)}
 @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-6px) rotate(3deg)}}
 .wave{position:absolute;bottom:-1px;left:0;width:100%;height:60px}
+
+/* 波紋(アプリの「今日どこ行く?」と同じ同心円)。外側ほど薄くする */
+.rip{position:absolute;pointer-events:none;width:var(--s,480px);aspect-ratio:1;background:center/contain no-repeat;-webkit-mask:radial-gradient(closest-side,#000 45%,transparent);mask:radial-gradient(closest-side,#000 45%,transparent);z-index:0}
+.rl{background-image:url(img/rip-light.svg)}
+.rd{background-image:url(img/rip-dark.svg)}
+.rr{background-image:url(img/rip-red.svg)}
+.rel{position:relative}
+main{overflow-x:clip}
+.rel > :not(.rip),.dm-band > :not(.rip),.end > :not(.rip){position:relative;z-index:1}
+/* 機能の画面の後ろにも */
+.feat{position:relative}
+.feat::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:620px;aspect-ratio:1;left:calc(150px - 310px + 20px);top:50%;transform:translateY(-50%);background:url(img/rip-dark.svg) center/contain no-repeat;-webkit-mask:radial-gradient(closest-side,#000 45%,transparent);mask:radial-gradient(closest-side,#000 45%,transparent)}
+.feat.rev::before{left:auto;right:calc(150px - 310px + 20px)}
+.feat:nth-of-type(odd)::before{background-image:url(img/rip-red.svg)}
 
 /* セクション */
 .sec{padding:56px 20px 8px}
@@ -60,7 +77,7 @@ em{font-style:normal}
 .feat-head .h2{margin-bottom:0}
 .steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
 .steps li{text-align:center;position:relative;background:var(--navy);color:var(--cream);border-radius:22px;padding:26px 22px 22px;overflow:hidden}
-.steps li::before{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(242,178,51,.28),transparent 70%)}
+.steps li::before{content:"";position:absolute;right:-70px;top:-70px;width:220px;height:220px;background:url(img/rip-light.svg) center/contain no-repeat,radial-gradient(circle,rgba(242,178,51,.26),transparent 45%);-webkit-mask:radial-gradient(closest-side,#000 55%,transparent);mask:radial-gradient(closest-side,#000 55%,transparent)}
 .steps .num{display:flex;margin-left:auto;margin-right:auto;width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;font-weight:900;font-size:19px;align-items:center;justify-content:center;margin-bottom:10px}
 .steps h3{font-family:"Zen Old Mincho",serif;font-size:24px;margin:0 0 6px}
 .steps p{margin:0;font-size:14px;opacity:.85;text-align:left;text-wrap:pretty;word-break:auto-phrase}
@@ -79,7 +96,7 @@ em{font-style:normal}
 .chk li::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:inset 0 0 0 4px #FCE7B8}
 
 /* だるま */
-.dm-band{display:flex;gap:28px;align-items:center;background:linear-gradient(135deg,#FFF6EA,#FCE9DA);border:1px solid #F1D6BF;border-radius:28px;padding:28px 32px}
+.dm-band{position:relative;overflow:hidden;display:flex;gap:28px;align-items:center;background:linear-gradient(135deg,#FFF6EA,#FCE9DA);border:1px solid #F1D6BF;border-radius:28px;padding:28px 32px}
 .dm-band img{flex:0 0 auto;filter:drop-shadow(0 10px 14px rgba(150,40,30,.25))}
 .dm-band h3{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:26px;margin:0 0 6px;color:var(--red)}
 .dm-band p{margin:0;font-size:15px;color:#4A4440}
@@ -94,7 +111,7 @@ em{font-style:normal}
 .priv .note{color:var(--sub);font-size:13.5px;margin:12px 0 0}
 
 /* 締め */
-.end{margin:64px 0 0;text-align:center;background:radial-gradient(90% 120% at 50% 0%,#2A3A5E,var(--night));color:var(--cream);padding:56px 20px 60px}
+.end{position:relative;overflow:hidden;margin:64px 0 0;text-align:center;background:radial-gradient(90% 120% at 50% 0%,#2A3A5E,var(--night));color:var(--cream);padding:56px 20px 60px}
 .end img{animation:bob 3.2s ease-in-out infinite;filter:drop-shadow(0 10px 16px rgba(0,0,0,.4))}
 .end h2{font-family:"Zen Old Mincho",serif;font-weight:900;font-size:clamp(28px,4.4vw,42px);margin:8px 0 6px}
 .end p{opacity:.85;margin:0 0 22px}
@@ -108,16 +125,18 @@ em{font-style:normal}
   .hero-in{grid-template-columns:1fr;text-align:center;padding-top:20px}
   .cta{justify-content:center}
   .hero-phones{height:470px;max-width:380px;margin:10px auto 0;width:100%}
-  .hero-phones .phone{width:205px}
-  .hero-phones .front{left:4%}
-  .dm-peek{left:-4px}
-  .dm-peek img{width:66px;height:auto}
-  .bub{margin-bottom:44px;font-size:13px}
+  .hero-phones .phone{width:200px}
+  .hero-phones .front{left:23%}
+  .hero-phones .back{right:-14%}
+  .dm-peek{left:0;bottom:30px;width:76px}
+  .dm-peek img{width:62px;height:auto}
+  .bub{font-size:12px;padding:6px 8px}
   .aru,.steps{grid-template-columns:1fr}
   .aru{gap:20px}
   .feat,.feat.rev{grid-template-columns:1fr;gap:26px;text-align:left;padding-top:52px}
   .feat.rev > :first-child{order:0}
   .feat .phone.sm{width:230px}
+  .feat::before,.feat.rev::before{width:520px;left:50%;right:auto;top:270px;transform:translate(-50%,-50%)}
 
   .dm-band{flex-direction:column;text-align:center;padding:26px 20px}
   .sec{padding-left:16px;padding-right:16px}
