@@ -17,7 +17,7 @@
 <header class="hd"><div class="wrap"><a class="logo" href="support.html">飲み<span>ドコ</span></a><p>飲み友と、今夜の一軒を。</p></div></header>
 <main class="wrap">
 <h1>サポート</h1>
-<p>飲みドコは、行きたいお店と行ったお店を記録して、飲み友と「今日どこ行く?」を決める iPhone アプリです。困ったときは、下のよくある質問を見るか、お問い合わせからご連絡ください。</p>
+<p>飲みドコは、行きたいお店と行ったお店を記録して、飲み友と「今日どこ行く?」を決める iPhone アプリです。困ったときは、下のよくある質問をご覧ください。不具合やご要望は、いちばん下の欄から送れます。</p>
 
 <h2>よくある質問</h2>
 <details><summary>機種を変えたら、記録はどうなる?</summary>
@@ -37,15 +37,15 @@
 <details><summary>ランキングを増やしたい</summary>
 <p>右上のアイコン →「あそぶ」→「ランキングを見る・編集する」で「＋」を押すと、「安い・チェーン」「デート」「一人飲み」などを、総合のほかに3つまで足せます。使わないランキングは、開いて「このランキングを外す」で外せます(中身は残ります)。</p></details>
 <details><summary>アカウントとデータを削除したい</summary>
-<p>アプリの右上のアイコン →「その他」→「アカウントを削除する」で、お店の記録・飲み友のつながり・プロフィールなどを、すべて削除できます。元には戻せません。アプリを開けない場合は、下のお問い合わせからご連絡ください。</p></details>
+<p>アプリの右上のアイコン →「その他」→「アカウントを削除する」で、お店の記録・飲み友のつながり・プロフィールなどを、すべて削除できます。元には戻せません。</p><p>アプリを開けないときは、次のとおりです。</p><ul><li><b>Apple でログインしていた</b>: 別の iPhone に飲みドコを入れ、同じ Apple ID でログインしてから「アカウントを削除する」を押してください。</li><li><b>ログインしないまま iPhone をなくした</b>: そのアカウントには、ご本人も含めて誰も入れません。ご本人であることを確かめる方法がないため、個別の削除はお受けしていません。飲み友からは、飲み友があなたを外すと見えなくなります。</li><li><b>そのほか</b>: 下の欄で「データ・アカウント削除」を選び、返信先を書いて送ってください。ご本人であることを確かめるため、こちらからご連絡します。</li></ul></details>
 
-<h2 id="contact">お問い合わせ</h2>
+<h2 id="contact">不具合・ご要望を送る</h2>
+<p class="note">個別の返信はしていません。いただいた内容は、改善や対応に使います。使い方は、上のよくある質問をご覧ください。</p>
 <div class="card">
   <form id="cf">
     <label for="kind">種類</label>
     <select id="kind" required>
       <option value="bug">不具合</option>
-      <option value="howto">使い方の質問</option>
       <option value="idea">ご要望</option>
       <option value="safety">迷惑な利用者・安全について</option>
       <option value="data">データ・アカウント削除</option>
@@ -53,9 +53,12 @@
     </select>
     <label for="text">内容</label>
     <textarea id="text" maxlength="2000" required placeholder="できるだけ具体的にお書きください(どの画面で、何をしたら、どうなったか など)"></textarea>
-    <label for="reply">返信先(任意)</label>
-    <input id="reply" type="text" maxlength="200" placeholder="返信がほしい場合は、メールアドレスなど">
-    <p class="note">返信先は、このお問い合わせへの返信にだけ使います。アプリの右上のアイコン →「その他」→「お問い合わせ」からも送れます。</p>
+    <div id="replyBox" hidden>
+      <label for="reply">返信先(必須)</label>
+      <input id="reply" type="text" maxlength="200" placeholder="メールアドレスなど">
+      <p class="note">データ・アカウント削除の依頼だけは、ご本人であることを確かめるため、こちらからご連絡します。返信先はそのためだけに使います。</p>
+    </div>
+    <p class="note">「迷惑な利用者・安全について」は、内容を確認して対応します(返信はしません)。アプリの右上のアイコン →「その他」→「不具合・ご要望を送る」からも送れます。</p>
     <button id="send" type="submit">送る</button>
     <p id="msg" class="msg" role="status"></p>
   </form>
